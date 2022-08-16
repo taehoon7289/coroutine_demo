@@ -13,12 +13,19 @@ class RouteConfig(
 
     @Bean
     fun routes() = coRouter {
-        accept(MediaType.APPLICATION_JSON).nest {
-            GET("/", routerHandler::getPersons)
-            GET("/{id}", routerHandler::getPerson)
-            POST("/", routerHandler::savePerson)
-            DELETE("/{id}", routerHandler::removePerson)
-        }
+        accept(MediaType.APPLICATION_JSON)
+            .nest {
+//                GET("/", routerHandler::getPersons)
+//                GET("/{id}", routerHandler::getPerson)
+//                POST("/", routerHandler::savePerson)
+//                DELETE("/{id}", routerHandler::removePerson)
+
+                GET("/student/", routerHandler::getStudents)
+                GET("/student/{id}", routerHandler::getStudent)
+                POST("/student/", routerHandler::saveStudent)
+                DELETE("/student/{id}", routerHandler::removeStudent)
+            }
+
 
     }
 

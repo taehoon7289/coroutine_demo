@@ -10,7 +10,7 @@ import org.springframework.web.reactive.function.server.body
 import org.springframework.web.reactive.function.server.router
 import reactor.core.publisher.Mono
 
-@SpringBootApplication(exclude = [R2dbcAutoConfiguration::class])
+@SpringBootApplication
 class CoroutineDemoApplication
 
 fun main(args: Array<String>) {
